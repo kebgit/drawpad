@@ -3,17 +3,43 @@ const sizeinput = document.querySelector("input");
 
 function takeSizeInput(){
     userSizeInput = +(sizeinput.value);
-    alert(userSizeInput);
+}
+
+function clearBlock(){
+    canvasblock.innerHTML='';
 }
 
 sizeinput.addEventListener("keypress", function(e){
     if (e.key ==="Enter"){
         takeSizeInput();
+        clearBlock();
+        addGrid();
     }
 })
 
+function addRow(){
+    const row = document.createElement("div");
+    row.className = "row";
 
+    for (let i=1; i<=userSizeInput;i++){
+        const pixel = document.createElement("div");
+        
+        pixel.className = "pixel";
+        row.appendChild(pixel);
+    }
 
+    canvasblock.appendChild(row);
+}
+
+function addGrid(){
+    for (let i=1 ; i<=userSizeInput ; i++){
+        addRow();
+    }
+}
+
+function clearDrawing(){
+    //reset pixel background colors
+}
 
 
 // Take user input as number

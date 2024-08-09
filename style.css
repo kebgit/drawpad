@@ -9,3 +9,24 @@ body *,
     text-align: center;
     align-items: center;
 }
+
+.canvasblock{
+    width: 500px;
+    height: 500px;
+    justify-content: space-around;
+}
+
+.row {
+    flex-direction: row;
+    width: 100%;
+    flex: 1;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+.pixel{
+    width: 100%;
+    flex: 1;
+    justify-content: stretch;
+    align-items: stretch;
+}
