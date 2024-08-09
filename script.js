@@ -14,8 +14,22 @@ sizeinput.addEventListener("keypress", function(e){
         takeSizeInput();
         clearBlock();
         addGrid();
+
+        var allPixels = document.getElementsByClassName("pixel")
+        function colorPixel (){
+            this.className = "colored pixel";
+        }
+
+        for (let i=0; i<allPixels.length;i++){
+            allPixels[i].addEventListener("mouseover", colorPixel);
     }
-})
+}});
+
+function addGrid(){
+    for (let i=1 ; i<=userSizeInput ; i++){
+        addRow();
+    }
+}
 
 function addRow(){
     const row = document.createElement("div");
@@ -29,12 +43,6 @@ function addRow(){
     }
 
     canvasblock.appendChild(row);
-}
-
-function addGrid(){
-    for (let i=1 ; i<=userSizeInput ; i++){
-        addRow();
-    }
 }
 
 function clearDrawing(){

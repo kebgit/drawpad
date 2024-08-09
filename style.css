@@ -1,7 +1,7 @@
 body,
 body *,
 * {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: 0;
     padding: 0;
     display: flex;
@@ -14,6 +14,8 @@ body *,
     width: 500px;
     height: 500px;
     justify-content: space-around;
+    border: 1px solid black;
+    margin: 1em;
 }
 
 .row {
@@ -29,4 +31,13 @@ body *,
     flex: 1;
     justify-content: stretch;
     align-items: stretch;
+    border: 1px solid black;
+}
+
+h1{
+    margin: 1em 0px 0px;
+}
+
+.colored{
+    background-color: black;
 }
